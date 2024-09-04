@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".calculate"
+    android:id="@+id/main">
+
+    <ImageButton
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/arrow"
+        android:background="@color/white"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"/>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Кредитный калькулятор"
+        android:textSize="24dp"
+        android:layout_gravity="center"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginBottom="41dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/pastel_green"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="34dp"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal"
+            android:padding="5dp"
+            android:background="@drawable/seekbar_shape">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Сколько вам нужно?"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/black"/>
+            <SeekBar
+                android:id="@+id/seek_bar"
+                android:layout_width="340dp"
+                android:layout_height="10dp"
+                android:layout_gravity="center_horizontal"
+                android:min="30000"
+                android:max="100000"/>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="от 30000"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:layout_editor_absoluteY="4dp" />
+
+                <TextView
+                    android:id="@+id/seek_bar_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="30000р"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toStartOf="@+id/textView"
+                    app:layout_constraintStart_toEndOf="@+id/textView2"
+                    tools:layout_editor_absoluteY="5dp" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="до 100000"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    tools:layout_editor_absoluteY="5dp" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/credit_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15sp"
+            android:background="@drawable/seekbar_shape"
+            android:textColorHint="@color/black"
+            android:hint="Введите срок кредита"
+            android:padding="15sp"
+            android:inputType="number" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/calculate_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/button_shape"
+            android:padding="15dp"
+            android:text="Рассчитить"
+            android:textColor="@color/white"
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/month_payment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Ежемесячный платеж"
+            android:background="@drawable/seekbar_shape"
+            android:textColor="@color/black"
+            android:layout_marginTop="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="170dp"
+            android:padding="9sp"/>
+    </LinearLayout>
+</LinearLayout>

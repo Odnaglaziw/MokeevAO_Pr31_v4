@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.BankApp" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Primary brand color: white background. -->
+        <item name="android:colorBackground">@color/white</item>
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/white</item>
+        <item name="colorAccent">@color/teal_200</item>
+        <!-- Text color on primary. -->
+        <item name="android:textColorPrimary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@android:color/white</item>
+        <!-- No app name in action bar because there's no action bar -->
+        <item name="android:windowNoTitle">true</item>
+    </style>
+</resources>
